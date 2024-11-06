@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+	<link rel="stylesheet" href="../css/styles.css">
+	<style>/* ---------- Base Styles ---------- */
+		body {
+		  font-family: 'Roboto', sans-serif;
+		  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+		  margin: 0;
+		  padding: 0;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  min-height: 100vh; /* Full height of viewport */
+		  flex-direction: column;
+		  overflow: auto; /* Allow content to overflow but keep it within bounds */
+		}
+		
+		/* Center container */
+		.container-center {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.3);
+		  padding: 20px;  /* Ensure there’s some space on the edges */
+		  box-sizing: border-box;
+		  overflow: hidden;
+		}
+		
+		/* Form container with modern design */
+		.form-container {
+		  background: #fff;
+		  border-radius: 15px;
+		  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		  padding: 50px 40px;
+		  width: 100%;
+		  max-width: 400px;
+		  text-align: center;
+		  animation: slideIn 0.5s ease-out;
+		  box-sizing: border-box;
+		}
+		
+		/* Animating form container */
+		@keyframes slideIn {
+		  from {
+			transform: translateY(50px);
+			opacity: 0;
+		  }
+		  to {
+			transform: translateY(0);
+			opacity: 1;
+		  }
+		}
+		
+		/* Heading */
+		h2 {
+		  color: #4b4b4b;
+		  font-size: 28px;
+		  font-weight: 700;
+		  margin-bottom: 30px;
+		  letter-spacing: 1px;
+		}
+		
+		/* Form group styling */
+		.form-group {
+		  margin-bottom: 25px;
+		  text-align: left;
+		  position: relative;
+		}
+		
+		/* Label styling */
+		.form-group label {
+		  color: #666;
+		  font-size: 16px;
+		  font-weight: 600;
+		  margin-bottom: 8px;
+		  display: block;
+		  transition: all 0.3s ease;
+		}
+		
+		/* Input fields styling */
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		input[type="password"],
+		select,
+		textarea {
+		  width: 100%;
+		  padding: 15px;
+		  font-size: 16px;
+		  border: 1px solid #ddd;
+		  border-radius: 10px;
+		  background-color: #f8f8f8;
+		  color: #333;
+		  outline: none;
+		  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+		}
+		
+		/* Focus effect for inputs */
+		input:focus,
+		select:focus,
+		textarea:focus {
+		  border-color: #6a11cb;
+		  box-shadow: 0 0 5px rgba(106, 17, 203, 0.7);
+		}
+		
+		/* Button styling */
+		button {
+		  background-color: #6a11cb;
+		  color: white;
+		  padding: 15px 25px;
+		  border: none;
+		  border-radius: 10px;
+		  font-size: 18px;
+		  font-weight: 600;
+		  width: 100%;
+		  cursor: pointer;
+		  transition: background-color 0.3s ease, transform 0.3s ease;
+		}
+		
+		/* Button hover effect */
+		button:hover {
+		  background-color: #2575fc;
+		  transform: scale(1.05);
+		}
+		
+		/* Link for page switch */
+		.switch-page {
+		  margin-top: 20px;
+		}
+		
+		.switch-page a {
+		  color: #6a11cb;
+		  text-decoration: none;
+		  font-size: 15px;
+		  font-weight: 500;
+		}
+		
+		.switch-page a:hover {
+		  text-decoration: underline;
+		}
+		
+		/* ---------- Role-Specific Fields Styles ---------- */
+		.role-specific {
+		  margin-top: 20px;
+		}
+		
+		.role-specific label {
+		  font-size: 16px;
+		  font-weight: 500;
+		  margin-bottom: 8px;
+		  color: #555;
+		}
+		
+		/* ---------- Responsive styling for mobile screens ---------- */
+		@media (max-width: 500px) {
+		  .form-container {
+			padding: 30px 20px;
+		  }
+		
+		  h2 {
+			font-size: 22px;
+		  }
+		
+		  input[type="text"],
+		  input[type="email"],
+		  input[type="tel"],
+		  input[type="password"],
+		  select {
+			font-size: 14px;
+		  }
+		
+		  button {
+			font-size: 16px;
+			padding: 12px 20px;
+		  }
+		}
+		</style>
+</head>
+
+<body>
+	
+	<div class="container-center my-5"  >
+		<div class="form-container" >
+			<h2>Register Yourself</h2>
+
+			<form id="registration-form">
+
+				<div class="form-group">
+					<label for="full-name">Full Name:</label>
+					<input type="text" id="full-name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" required>
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" required>
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input type="password" id="password" required>
+				</div>
+
+				<div class="form-group">
+					<label for="role">Select Role:</label>
+					<select id="role" required>
+						<option value="">Select Role</option>
+						<option value="user">User</option>
+						<option value="businessPerson">Business Person</option>
+						<option value="investor">Investor</option>
+						<option value="banker">Banker</option>
+						<option value="businessAdvisor">Business Advisor</option>
+					</select>
+				</div>
+
+				<div class="role-specific" id="businessPerson-fields" style="display: none;">
+					<label for="business-idea">Business Idea/Project Description:</label>
+					<textarea id="business-idea"></textarea>
+				</div>
+
+				<div class="role-specific" id="investor-fields" style="display: none;">
+					<label for="investment-amount">Investment Capacity (in USD):</label>
+					<input type="number" id="investment-amount">
+					<label for="investment-goal">Investment Goals:</label>
+					<textarea id="investment-goal"></textarea>
+				</div>
+
+				<div class="role-specific" id="banker-fields" style="display: none;">
+					<label for="loan-details">Loan Details:</label>
+					<textarea id="loan-details"></textarea>
+				</div>
+
+				<div class="role-specific" id="businessAdvisor-fields" style="display: none;">
+					<label for="advisor-information">Advisor Information:</label>
+					<textarea id="advisor-information"></textarea>
+				</div>
+
+				<button type="submit">Register</button>
+			</form>
+
+			<div class="switch-page">
+				<p>Already have an account? <a href="../pages/login.html">Login here</a></p>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="../js/firebase-config.js"></script>
+	<script type="module" src="../js/auth.js"></script>
+	<script type="module" src="../js/registration.js"></script>
+</body>
+
+</html>

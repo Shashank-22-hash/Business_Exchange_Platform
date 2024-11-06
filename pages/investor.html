@@ -1,0 +1,153 @@
+<!-- Header Placeholder -->
+<style>
+	/* Basic styling for body and main container */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  /* Center content in viewport */
+  .investor_main {
+	background: #fff;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	padding: 50px 40px;
+	width: 100%;
+	max-width: 600px;
+	text-align: center;
+	animation: slideIn 0.5s ease-out;
+	box-sizing: border-box;
+  }
+  
+  /* Animation for the main container */
+  @keyframes slideIn {
+	from {
+	  transform: translateY(50px);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  /* Heading styling */
+  .investor_heading1 {
+	color: #4b4b4b;
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+  }
+  
+  /* Form styling for proposal input */
+  #proposal-form {
+	margin-top: 20px;
+  }
+  
+  #proposal-form input[type="text"],
+  #proposal-form textarea {
+	width: 100%;
+	padding: 15px;
+	font-size: 16px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background-color: #f8f8f8;
+	color: #333;
+	outline: none;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	margin-bottom: 20px;
+	resize: vertical;
+  }
+  
+  /* Input focus effects */
+  #proposal-form input[type="text"]:focus,
+  #proposal-form textarea:focus {
+	border-color: #6a11cb;
+	box-shadow: 0 0 5px rgba(106, 17, 203, 0.7);
+  }
+  
+  /* Submit button styling */
+  .investor_submit-btn {
+	background-color: #6a11cb;
+	color: white;
+	padding: 15px 25px;
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	width: 100%;
+  }
+  
+  .investor_submit-btn:hover {
+	background-color: #2575fc;
+	transform: scale(1.05);
+  }
+  
+  /* Proposals container */
+  #proposals-container {
+	margin-top: 40px;
+	text-align: left;
+  }
+  
+  #proposals-container h2 {
+	color: #4b4b4b;
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 500px) {
+	.investor_main {
+	  padding: 30px 20px;
+	}
+  
+	.investor_heading1,
+	#proposals-container h2 {
+	  font-size: 22px;
+	}
+  
+	#proposal-form input[type="text"],
+	#proposal-form textarea {
+	  font-size: 14px;
+	}
+  
+	.investor_submit-btn {
+	  font-size: 16px;
+	  padding: 12px 20px;
+	}
+  }
+  
+</style>
+<div id="header-placeholder"></div>
+
+<main class="investor_main">
+
+	<h1 class="investor_heading1">Investor Dashboard</h1>
+	<div id="proposals-container">
+		<h2 class="investor_heading1">Your Proposals</h2>
+	</div>
+	<form id="proposal-form">
+		<input type="text" id="proposal-title" placeholder="Proposal Title" required>
+		<textarea id="proposal-description" placeholder="Proposal Description" required></textarea>
+		<button class="investor_submit-btn" type="submit">Submit Proposal</button>
+	</form>
+
+	
+
+</main>
+
+<!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<script type="module" src="../js/investor.js"></script>

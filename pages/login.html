@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="../css/styles.css">
+	<style>
+		/* General body styling */
+body {
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  /* Center container */
+  .container-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Form container with modern design */
+  .form-container {
+	background: #fff;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	padding: 50px 40px;
+	width: 100%;
+	max-width: 400px;
+	text-align: center;
+	animation: slideIn 0.5s ease-out;
+  }
+  
+  /* Animating form container */
+  @keyframes slideIn {
+	from {
+	  transform: translateY(50px);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  /* Heading */
+  h2 {
+	color: #4b4b4b;
+	font-size: 28px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+	margin-bottom: 25px;
+	text-align: left;
+	position: relative;
+  }
+  
+  /* Label styling */
+  .form-group label {
+	color: #666;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	display: block;
+	transition: all 0.3s ease;
+  }
+  
+  /* Input fields styling */
+  input[type="email"],
+  input[type="password"],
+  select {
+	width: 100%;
+	padding: 15px;
+	font-size: 16px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	background-color: #f8f8f8;
+	color: #333;
+	outline: none;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Focus effect for inputs */
+  input:focus,
+  select:focus {
+	border-color: #6a11cb;
+	box-shadow: 0 0 5px rgba(106, 17, 203, 0.7);
+  }
+  
+  /* Button styling */
+  button {
+	background-color: #6a11cb;
+	color: white;
+	padding: 15px 25px;
+	border: none;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	width: 100%;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+	background-color: #2575fc;
+	transform: scale(1.05);
+  }
+  
+  /* Link for page switch */
+  .switch-page {
+	margin-top: 20px;
+  }
+  
+  .switch-page a {
+	color: #6a11cb;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 500;
+  }
+  
+  .switch-page a:hover {
+	text-decoration: underline;
+  }
+  
+  /* Responsive styling for mobile screens */
+  @media (max-width: 500px) {
+	.form-container {
+	  padding: 30px 20px;
+	}
+  
+	h2 {
+	  font-size: 22px;
+	}
+  
+	input[type="email"],
+	input[type="password"],
+	select {
+	  font-size: 14px;
+	}
+  
+	button {
+	  font-size: 16px;
+	  padding: 12px 20px;
+	}
+  }
+  
+	</style>
+</head>
+
+<body>
+	<div class="container-center">
+		<div class="form-container">
+			<h2>Login to Your Account</h2>
+			<form id="login-form">
+				<div class="form-group">
+					<label for="login-email">Email:</label>
+					<input type="email" id="login-email" required>
+				</div>
+				<div class="form-group">
+					<label for="login-password">Password:</label>
+					<input type="password" id="login-password" required>
+				</div>
+				<div class="form-group">
+					<label for="login-role">Select Role:</label>
+					<select id="login-role" required>
+						<option value="">Select Role</option>
+						<option value="user">User</option>
+						<option value="businessPerson">Business Person</option>
+						<option value="investor">Investor</option>
+						<option value="banker">Banker</option>
+						<option value="businessAdvisor">Business Advisor</option>
+					</select>
+				</div>
+				<button type="submit">Login</button>
+			</form>
+			<div class="switch-page">
+				Don't have an account?<a href="../pages/registration.html"> Register here</a>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="../js/auth.js"></script>
+</body>
+
+</html>
