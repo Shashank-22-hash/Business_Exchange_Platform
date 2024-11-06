@@ -31,5 +31,11 @@ To configure Firebase in your project, you'll need to:
 
 ## GitHub Repository
 
-[Link to GitHub Repository](https://github.com/yourusername/Investor-Entrepreneur-Platform)
+https://github.com/Shashank-22-hash/Business_Exchange_Platform
+
+## Try Here
+
+
+
+
 
